@@ -13,7 +13,11 @@ export default function ReviewNotes({ page }) {
   const notes = items.map((it, i) => ({ ...it, n: i + 1 }));
   if (notes.length === 0) return null;
 
-  const rule = '━'.repeat(40);
+  // A real CSS rule, not a run of box-drawing glyphs — the glyph version was a
+  // single unbreakable token that forced ~587px min-width and broke mobile.
+  const Rule = () => (
+    <span aria-hidden="true" className="block h-0.5 w-full max-w-full bg-burlap/40" />
+  );
 
   return (
     <aside
@@ -23,9 +27,7 @@ export default function ReviewNotes({ page }) {
       <div className="container-fc py-14">
         <details open className="group">
           <summary className="cursor-pointer list-none select-none">
-            <span className="block font-body text-[11px] tracking-[0.28em] uppercase text-burlap">
-              {rule}
-            </span>
+            <Rule />
             <span className="mt-2 block font-display font-bold text-lg text-hunter">
               Review Notes
               <span className="text-burlap font-body font-normal text-sm normal-case tracking-normal">
@@ -37,8 +39,8 @@ export default function ReviewNotes({ page }) {
                 </span>
               </span>
             </span>
-            <span className="mt-1 block font-body text-[11px] tracking-[0.28em] uppercase text-burlap">
-              {rule}
+            <span className="mt-1 block">
+              <Rule />
             </span>
           </summary>
 
