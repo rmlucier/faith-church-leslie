@@ -23,6 +23,14 @@
   ::selection {
     @apply bg-hunter text-manila;
   }
+  /* Keyboard focus — two-ring (manila outline + hunter halo) so it stays
+     visible on both manila sections and hunter/ink hero backgrounds. */
+  :focus-visible {
+    outline: 2px solid #efe4c7; /* manila */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px #2d4a2b; /* hunter halo */
+    border-radius: 2px;
+  }
   h1,
   h2,
   h3,
