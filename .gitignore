@@ -29,3 +29,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
+# .env.production holds ONLY the public VITE_SITE_URL (no secrets — VITE_ vars
+# are bundled into the client anyway). Committed so Vercel substitutes it at build.
+!.env.production

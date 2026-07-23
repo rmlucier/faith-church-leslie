@@ -1,7 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 
-const SITE_URL = 'https://faithchurchleslie.com';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+// Canonical origin. Driven by VITE_SITE_URL (set per-environment) so it can flip
+// from the Vercel URL to faithchurchleslie.com after the DNS cutover with no
+// code change. Falls back to the live Vercel URL when the env var is absent.
+const SITE_URL = (
+  import.meta.env.VITE_SITE_URL || 'https://faith-church-leslie.vercel.app'
+).replace(/\/$/, '');
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 /**
  * Per-page SEO metadata: <title>, description, canonical, and Open Graph /
