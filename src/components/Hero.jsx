@@ -58,9 +58,11 @@ export default function Hero({
             fetchpriority="high"
           />
         )}
-        {/* Hunter tint for brand cohesion + gradient toward the text zone. */}
-        <div className="absolute inset-0 bg-hunter/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-hunter/90 via-hunter/45 to-hunter/20" />
+        {/* Hunter tint for brand cohesion + scrims anchored to the text zone
+            (bottom-left) so the cream headline/subhead always clear WCAG AA. */}
+        <div className="absolute inset-0 bg-hunter/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-hunter/60 to-hunter/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/25 to-transparent" />
       </div>
 
       <div className="container-fc relative z-10">
