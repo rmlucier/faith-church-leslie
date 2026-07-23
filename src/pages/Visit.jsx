@@ -4,6 +4,8 @@ import Section from '../components/Section.jsx';
 import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
+import PhotoNeeded from '../components/PhotoNeeded.jsx';
+import CountBadge from '../components/CountBadge.jsx';
 import { visit } from '../content/visit.js';
 import { church, links } from '../content/site.js';
 
@@ -46,6 +48,16 @@ export default function Visit() {
         </div>
       </div>
 
+      {/* Photo placeholders — the space, and the people in it */}
+      <Section>
+        <div className="grid gap-6 md:grid-cols-3">
+          <PhotoNeeded label="A greeter at the door" aspect="4/3" />
+          <PhotoNeeded label="Kids classroom" aspect="4/3" />
+          <PhotoNeeded label="Coffee moment before service" aspect="4/3" />
+        </div>
+        <PhotoNeeded label="The sanctuary, from the back" aspect="16/9" className="mt-6" />
+      </Section>
+
       {/* Flow */}
       <Section id="flow" labelledBy="flow-h">
         <Reveal>
@@ -58,7 +70,7 @@ export default function Visit() {
           {visit.flow.steps.map((s, i) => (
             <Reveal as="li" delay={i * 0.06} key={i} className="grid gap-4 md:grid-cols-12 items-start border-t border-burlap/25 pt-6">
               <div className="md:col-span-1 font-display font-bold text-4xl text-hunter/40">
-                0{i + 1}
+                <CountBadge>0{i + 1}</CountBadge>
               </div>
               <div className="md:col-span-11">
                 <h3 className="font-display font-bold text-2xl"><Copy item={s.title} /></h3>

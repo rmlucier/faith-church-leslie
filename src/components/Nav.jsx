@@ -36,11 +36,11 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
         solid
           ? 'bg-manila/95 backdrop-blur-sm border-b border-burlap/20'
           : 'bg-transparent'
-      }`}
+      } ${scrolled ? 'shadow-[0_2px_20px_rgba(90,82,60,0.15)]' : 'shadow-none'}`}
     >
       <div className="container-fc flex items-center justify-between h-20">
         <Link to="/" aria-label={`${church.name} — home`} className="block">

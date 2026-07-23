@@ -4,6 +4,7 @@ import Section from '../components/Section.jsx';
 import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
+import PhotoNeeded from '../components/PhotoNeeded.jsx';
 import { serve } from '../content/serve.js';
 import { links } from '../content/site.js';
 
@@ -61,6 +62,13 @@ export default function Serve() {
             <Copy item={serve.ways.heading} />
           </h2>
         </Reveal>
+        <Reveal className="mt-12">
+          <PhotoNeeded label="Fall Festival — Leslie community" aspect="16/9" />
+        </Reveal>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <PhotoNeeded label="Homecoming Dinner — football team + volunteers" aspect="4/3" />
+          <PhotoNeeded label="Haiti — Arise team on the ground" aspect="4/3" />
+        </div>
         <ul className="mt-12 grid gap-6 md:grid-cols-2">
           {serve.ways.items.map((w, i) => (
             <Reveal as="li" delay={i * 0.05} key={i} className="border-l-2 border-hunter pl-6 py-1 font-body text-lg text-burlap leading-relaxed">

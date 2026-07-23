@@ -6,8 +6,17 @@ import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
 import EventsFeed from '../components/EventsFeed.jsx';
 import LiteYouTube from '../components/LiteYouTube.jsx';
+import PhotoNeeded from '../components/PhotoNeeded.jsx';
+import CountBadge from '../components/CountBadge.jsx';
 import { home } from '../content/home.js';
 import { church, links } from '../content/site.js';
+
+// Photo placeholders per Gather/Engage/Serve column (matches column order).
+const columnPhotos = [
+  'Sunday morning — congregation gathered',
+  'Engage Group around a kitchen table',
+  'Volunteers on a work day — swing set, furnace, food drive',
+];
 
 export default function Home() {
   return (
@@ -26,6 +35,7 @@ export default function Home() {
         headline={home.hero.tagline}
         photo={home.hero.photo}
         photoAlt=""
+        splitHeadline
         subhead={<Copy item={home.hero.subhead} />}
       >
         <Button to="/visit">Plan Your Visit</Button>
@@ -56,7 +66,8 @@ export default function Home() {
         </Reveal>
         <div className="mt-16 grid gap-10 md:grid-cols-3">
           {home.strategy.columns.map((col, i) => (
-            <Reveal as="div" delay={i * 0.08} key={i} className="border-t border-burlap/25 pt-6">
+            <Reveal as="div" delay={i * 0.08} key={i}>
+              <PhotoNeeded label={columnPhotos[i]} aspect="4/3" className="mb-6" />
               <p className="eyebrow text-hunter">
                 <Copy item={col.eyebrow} />
               </p>
@@ -84,10 +95,15 @@ export default function Home() {
             <Copy item={home.visit.heading} />
           </h2>
         </Reveal>
+        <Reveal className="mt-12">
+          <PhotoNeeded label="Faces at 9:45 with coffee" aspect="16/9" />
+        </Reveal>
         <div className="mt-14 grid gap-10 md:grid-cols-3">
           {home.visit.items.map((item, i) => (
             <Reveal delay={i * 0.08} key={i}>
-              <p className="font-display font-bold text-5xl text-hunter/40">0{i + 1}</p>
+              <p className="font-display font-bold text-5xl text-hunter/40">
+                <CountBadge>0{i + 1}</CountBadge>
+              </p>
               <p className="mt-4 font-body text-lg text-ink leading-relaxed">
                 <Copy item={item} />
               </p>
@@ -117,7 +133,7 @@ export default function Home() {
         <ol className="mt-14 grid gap-6 md:grid-cols-5">
           {home.pathway.stops.map((stop, i) => (
             <Reveal as="li" delay={i * 0.06} key={i} className="border-t-2 border-hunter pt-4">
-              <span className="font-display font-bold text-hunter text-lg">{i + 1}</span>
+              <CountBadge className="font-display font-bold text-hunter text-lg">{i + 1}</CountBadge>
               <h3 className="mt-2 font-display font-bold text-lg leading-tight">
                 <Copy item={stop.name} />
               </h3>

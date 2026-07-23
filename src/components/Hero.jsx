@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import HeadlineReveal from './HeadlineReveal.jsx';
 
 /**
  * Reusable hero. A photo under a hunter overlay (~legibility), with eyebrow /
@@ -23,6 +24,7 @@ export default function Hero({
   photoAlt = '',
   children,
   short = false,
+  splitHeadline = false,
 }) {
   const ref = useRef(null);
   const reduce = useReducedMotion();
@@ -78,14 +80,21 @@ export default function Hero({
             </motion.p>
           )}
 
-          <motion.h1
-            initial={reduce ? false : { opacity: 0, y: 24 }}
-            animate={reduce ? false : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mt-5 font-display font-bold text-manila leading-[1.02] text-[clamp(2.6rem,7vw,5.5rem)]"
-          >
-            {headline}
-          </motion.h1>
+          {splitHeadline && typeof headline === 'string' ? (
+            <HeadlineReveal
+              text={headline}
+              className="mt-5 font-display font-bold text-manila leading-[1.02] text-[clamp(2.6rem,7vw,5.5rem)]"
+            />
+          ) : (
+            <motion.h1
+              initial={reduce ? false : { opacity: 0, y: 24 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="mt-5 font-display font-bold text-manila leading-[1.02] text-[clamp(2.6rem,7vw,5.5rem)]"
+            >
+              {headline}
+            </motion.h1>
+          )}
 
           {subhead && (
             <motion.p

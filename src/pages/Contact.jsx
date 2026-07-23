@@ -4,6 +4,7 @@ import Section from '../components/Section.jsx';
 import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
+import PhotoNeeded from '../components/PhotoNeeded.jsx';
 import { contact } from '../content/contact.js';
 import { church, links } from '../content/site.js';
 
@@ -76,6 +77,9 @@ export default function Contact() {
             </div>
           </Reveal>
         </div>
+        <Reveal className="mt-12">
+          <PhotoNeeded label="Staff group shot" aspect="16/9" />
+        </Reveal>
       </Section>
     </PageShell>
   );

@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring, MotionConfig, useReducedMotion } from 'framer-motion';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Nav from './components/Nav.jsx';
@@ -25,6 +25,7 @@ function RouteFallback() {
 }
 
 export default function App() {
+  const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 120,
@@ -33,30 +34,32 @@ export default function App() {
   });
 
   return (
-    <BrowserRouter>
-      <ScrollToHash />
-      <motion.div
-        style={{ scaleX }}
-        className="fixed top-0 left-0 right-0 h-0.5 bg-hunter origin-left z-[60]"
-      />
-      <Nav />
-      <Suspense fallback={<RouteFallback />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/visit" element={<Visit />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/discipleship" element={<Discipleship />} />
-          <Route path="/serve" element={<Serve />} />
-          <Route path="/sermons" element={<Sermons />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/give" element={<Give />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-      <Footer />
-      <Analytics />
-      <SpeedInsights />
-    </BrowserRouter>
+    <MotionConfig reducedMotion={reduce ? 'always' : 'never'}>
+      <BrowserRouter>
+        <ScrollToHash />
+        <motion.div
+          style={{ scaleX }}
+          className="fixed top-0 left-0 right-0 h-0.5 bg-hunter origin-left z-[60]"
+        />
+        <Nav />
+        <Suspense fallback={<RouteFallback />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/visit" element={<Visit />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/discipleship" element={<Discipleship />} />
+            <Route path="/serve" element={<Serve />} />
+            <Route path="/sermons" element={<Sermons />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/give" element={<Give />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+        <Analytics />
+        <SpeedInsights />
+      </BrowserRouter>
+    </MotionConfig>
   );
 }

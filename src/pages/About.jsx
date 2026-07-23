@@ -4,6 +4,7 @@ import Section from '../components/Section.jsx';
 import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
+import PhotoNeeded from '../components/PhotoNeeded.jsx';
 import { about } from '../content/about.js';
 import { links } from '../content/site.js';
 
@@ -47,6 +48,9 @@ export default function About() {
             </p>
           </Reveal>
         </div>
+        <Reveal className="mt-12">
+          <PhotoNeeded label="Church exterior — 4020 N. Main St." aspect="16/9" />
+        </Reveal>
       </Section>
 
       {/* Mission / Vision / Strategy */}
@@ -129,6 +133,10 @@ export default function About() {
               ))}
             </div>
           </Reveal>
+        </div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <PhotoNeeded label="James at the pulpit — mid-message" aspect="4/5" />
+          <PhotoNeeded label="Crystal leading worship" aspect="4/5" />
         </div>
       </Section>
 

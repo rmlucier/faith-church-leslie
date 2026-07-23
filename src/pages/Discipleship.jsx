@@ -4,8 +4,16 @@ import Section from '../components/Section.jsx';
 import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
+import PhotoNeeded from '../components/PhotoNeeded.jsx';
+import CountBadge from '../components/CountBadge.jsx';
 import { discipleship as d } from '../content/discipleship.js';
 import { links } from '../content/site.js';
+
+// Photo placeholders keyed by pathway stop number (only where a photo helps).
+const stopPhotos = {
+  2: 'Rooted class — group of 10-15',
+  4: 'Emotionally Healthy Discipleship — small group',
+};
 
 export default function Discipleship() {
   return (
@@ -40,12 +48,19 @@ export default function Discipleship() {
           {d.stops.map((stop) => (
             <Reveal as="li" key={stop.n} className="grid gap-6 md:grid-cols-12 border-t-2 border-hunter pt-8">
               <div className="md:col-span-4">
-                <span className="font-display font-bold text-hunter text-xl">
+                <CountBadge className="font-display font-bold text-hunter text-xl">
                   Stop {stop.n}
-                </span>
+                </CountBadge>
                 <h2 className="mt-2 font-display font-bold text-2xl md:text-3xl">
                   <Copy item={stop.name} />
                 </h2>
+                {stopPhotos[stop.n] && (
+                  <PhotoNeeded
+                    label={stopPhotos[stop.n]}
+                    aspect="1/1"
+                    className="mt-5 max-w-[260px]"
+                  />
+                )}
               </div>
               <div className="md:col-span-8 grid gap-5 sm:grid-cols-3">
                 <div>
