@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Feed & Seed — component layer.
+   Values translated verbatim from the brand source
+   (sets/01-rural-vernacular/Faith_Church__feed-and-seed.html + world.html).
+   Manila paper, hunter ink, Roboto Slab display / IBM Plex Sans Condensed body.
+--------------------------------------------------------------------------- */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keep section anchors clear of the fixed header */
+    scroll-padding-top: 88px;
+  }
+  body {
+    @apply bg-manila text-ink;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  ::selection {
+    @apply bg-hunter text-manila;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-display font-bold text-ink;
+    letter-spacing: -0.01em;
+  }
+  p {
+    @apply text-burlap;
+  }
+}
+
+@layer components {
+  /* Wide condensed micro-labels — the Feed & Seed "aisle sign" voice. */
+  .eyebrow {
+    @apply font-body font-semibold uppercase text-burlap;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+  }
+  .section-label {
+    @apply font-body font-semibold uppercase text-hunter;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+  }
+
+  /* Container — max-w-7xl, generous gutters (matches Section spec). */
+  .container-fc {
+    @apply mx-auto max-w-7xl px-6 md:px-10;
+  }
+
+  /* Buttons. primary = filled hunter; ghost = outline that fills on hover.
+     Both share the condensed uppercase label treatment from the source. */
+  .btn {
+    @apply inline-flex items-center justify-center font-body font-semibold uppercase transition-colors duration-200;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    padding: 14px 32px;
+  }
+  .btn-primary {
+    @apply btn bg-hunter text-manila border border-hunter;
+  }
+  .btn-primary:hover {
+    @apply bg-ink border-ink text-manila;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-hunter border-hunter;
+    border-width: 1.5px;
+  }
+  .btn-ghost:hover {
+    @apply bg-hunter text-manila;
+  }
+
+  /* Inline prose link — hunter, thin underline offset (from world.html). */
+  .link-fc {
+    @apply text-hunter underline;
+    text-decoration-color: #5a523c; /* burlap */
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .link-fc:hover {
+    @apply text-ink;
+    text-decoration-color: #2d4a2b; /* hunter */
+  }
+}
+
+/* Manila-toned scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #efe4c7;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9c9a1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9caa8e;
+}
+
+/* Respect reduced-motion preference (also enforced in JS via useReducedMotion) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

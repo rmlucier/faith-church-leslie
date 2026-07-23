@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EFE4C7" />
+
+    <!-- Default title/description — each page overrides these with
+         react-helmet-async at runtime. These are the fallback values. -->
+    <title>Faith Church — Leslie, MI. Sundays at 10am.</title>
+    <meta
+      name="description"
+      content="Faith Church is a Jesus-centered family in Leslie, Michigan experiencing whole-life transformation. Built for people who came to do something. Sundays at 10am, coffee at 9:45."
+    />
+
+    <meta property="og:title" content="Faith Church — Leslie, MI" />
+    <meta property="og:description" content="Built for people who came to do something. Sundays at 10am in Leslie, Michigan. Come on in." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://faithchurchleslie.com" />
+    <meta property="og:image" content="https://faithchurchleslie.com/og-image.jpg" />
+    <meta property="og:site_name" content="Faith Church" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Schema.org structured data — drives Google's local knowledge panel.
+         Includes the historical name (Faith Assembly of God) so old references
+         still resolve to the current site. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Church",
+        "name": "Faith Church",
+        "alternateName": ["Faith Church Leslie", "Faith Assembly of God"],
+        "slogan": "Built for people who came to do something.",
+        "description": "A Jesus-centered family experiencing whole-life transformation. An Assemblies of God church in Leslie, Michigan. Sundays at 10am.",
+        "url": "https://faithchurchleslie.com",
+        "email": "Office@FaithChurchLeslie.com",
+        "telephone": "+1-517-589-9121",
+        "foundingDate": "1976",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4020 N. Main St.",
+          "addressLocality": "Leslie",
+          "addressRegion": "MI",
+          "postalCode": "49251",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Leslie, Michigan" },
+          { "@type": "City", "name": "Jackson, Michigan" },
+          { "@type": "City", "name": "Mason, Michigan" }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "10:00",
+            "closes": "11:30"
+          }
+        ],
+        "event": {
+          "@type": "Event",
+          "name": "Sunday Morning Gathering",
+          "description": "Weekly Sunday worship and teaching. Coffee and fellowship from 9:45.",
+          "eventSchedule": {
+            "@type": "Schedule",
+            "byDay": "https://schema.org/Sunday",
+            "startTime": "10:00",
+            "endTime": "11:30",
+            "repeatFrequency": "P1W"
+          },
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Faith Church",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4020 N. Main St.",
+              "addressLocality": "Leslie",
+              "addressRegion": "MI",
+              "postalCode": "49251",
+              "addressCountry": "US"
+            }
+          }
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-manila text-ink font-body antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
