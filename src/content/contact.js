@@ -30,4 +30,12 @@ export const contact = {
     label: proposed('contact-reach-label', 'Get in touch', 'Section label.'),
     emailNote: proposed('contact-email-note', 'The fastest way to reach us is email — we read every message.', 'Note above the email button.'),
   },
+
+  form: {
+    label: proposed('contact-form-label', 'Send a note', 'Form section label.'),
+    heading: proposed('contact-form-h', 'Tell us how we can help.', 'Form heading.'),
+    intro: proposed('contact-form-intro', 'Prayer request, a question, or just saying hi — we’ll get back to you.', 'Form intro line.'),
+    success: proposed('contact-form-success', 'Thanks — your note is on its way. We’ll be in touch soon.', 'Shown after a successful send.'),
+    error: proposed('contact-form-error', 'Something went wrong sending that. Please email us directly and we’ll make it right.', 'Shown on a send error.'),
+  },
 };

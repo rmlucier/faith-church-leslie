@@ -5,6 +5,7 @@ import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
 import PhotoNeeded from '../components/PhotoNeeded.jsx';
+import ContactForm from '../components/ContactForm.jsx';
 import { contact } from '../content/contact.js';
 import { church, links } from '../content/site.js';
 
@@ -80,6 +81,28 @@ export default function Contact() {
         <Reveal className="mt-12">
           <PhotoNeeded label="Staff group shot" aspect="16/9" />
         </Reveal>
+      </Section>
+
+      {/* Send a note — contact form (posts to /api/contact via Resend) */}
+      <Section id="write" tone="kraft" labelledBy="write-h">
+        <div className="grid gap-12 md:grid-cols-12">
+          <Reveal className="md:col-span-5">
+            <p className="section-label"><Copy item={contact.form.label} /></p>
+            <h2 id="write-h" className="mt-4 font-display font-bold text-3xl md:text-4xl">
+              <Copy item={contact.form.heading} />
+            </h2>
+            <p className="mt-6 font-body text-lg text-burlap leading-relaxed max-w-md">
+              <Copy item={contact.form.intro} />
+            </p>
+            <p className="mt-6 font-body text-burlap">
+              Prefer email? Write us at{' '}
+              <a href={`mailto:${church.email}`} className="link-fc">{church.email}</a>.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="md:col-span-7">
+            <ContactForm content={contact.form} />
+          </Reveal>
+        </div>
       </Section>
     </PageShell>
   );
