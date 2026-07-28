@@ -7,7 +7,10 @@ export const give = {
     eyebrow: sourced('Kingdom Builders', 'faithchurchleslie.com'),
     headline: proposed('give-hero-h', 'Some seed to keep. Some to sow.', 'Hero headline — Feed & Seed offering line.'),
     subhead: proposed('give-hero-sub', 'He gives seed to the sower. Giving at Faith Church plants into Leslie, into people in hard places, and into the world.', 'Hero subhead — 2 Cor. 9:10 paraphrase.'),
-    photo: '/images/from-current-site/kingdom-builders-2025.png',
+    // Clean evergreen backdrop (seed/sow theme) — replaced the Kingdom Builders
+    // text-graphic, whose baked-in wording competed with the hero headline.
+    // The graphic now lives in the "Where it goes" section below.
+    photo: '/images/from-current-site/black-forest-featuring-coniferous-evergreen-trees-2021-09-02-05-59-47-utc-1087055.jpg',
   },
 
   supports: {

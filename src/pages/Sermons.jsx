@@ -4,7 +4,7 @@ import Section from '../components/Section.jsx';
 import Button from '../components/Button.jsx';
 import Copy from '../components/Copy.jsx';
 import Reveal from '../components/Reveal.jsx';
-import LiteYouTube from '../components/LiteYouTube.jsx';
+import SermonsFeed from '../components/SermonsFeed.jsx';
 import { sermons } from '../content/sermons.js';
 import { links } from '../content/site.js';
 
@@ -42,23 +42,8 @@ export default function Sermons() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-3">
-          {sermons.recent.map((s, i) => (
-            <Reveal as="article" delay={i * 0.08} key={s.videoId}>
-              <div className="relative aspect-video bg-hunter">
-                <LiteYouTube videoId={s.videoId} title={s.title.text} />
-              </div>
-              <p className="mt-4 eyebrow text-hunter">
-                <Copy item={s.date} />
-              </p>
-              <h3 className="mt-1 font-display font-bold text-xl leading-snug">
-                <Copy item={s.title} />
-              </h3>
-              <p className="mt-1 font-body text-sm text-burlap">
-                <Copy item={s.speaker} />
-              </p>
-            </Reveal>
-          ))}
+        <div className="mt-12">
+          <SermonsFeed fallback={sermons.recent} limit={6} />
         </div>
 
         <Reveal className="mt-14 border-t border-burlap/25 pt-8">

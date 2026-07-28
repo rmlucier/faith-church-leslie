@@ -50,6 +50,14 @@ export default function Give() {
             </ul>
           </Reveal>
         </div>
+        <Reveal className="mt-14 flex justify-center">
+          <img
+            src="/images/from-current-site/kingdom-builders-2025.png"
+            alt="Kingdom Builders — Together in Mission: giving that reaches Leslie and the world."
+            className="w-full max-w-2xl border border-burlap/20"
+            loading="lazy"
+          />
+        </Reveal>
       </Section>
 
       {/* How to give */}
