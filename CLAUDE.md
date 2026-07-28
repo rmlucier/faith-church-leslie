@@ -17,8 +17,13 @@ Sourced from /Users/fc-office/Documents/Claude/Projects/Faith Church/_voice-evid
 ## Content discipline
 Every string in src/content/*.js is either `{ text, source: "url" }` (from the crawl) or `{ text, proposed: true }` (Claude Code wrote it). No untagged strings anywhere. Helpers: `sourced()` / `proposed()` in `src/content/_helpers.js`.
 
-## PCO events — MOCK ONLY for now
-`/api/events.js` returns MOCK_EVENTS. Do NOT wire up a live Planning Center feed yet. Roy will decide iCal vs full API in a future round.
+## Serverless functions in /api (read env only, never client)
+- `/api/events.js` — PCO events. MOCK_EVENTS for now; do NOT wire a live Planning Center feed yet (Roy will pick iCal vs API). All mock event names are sourced from the crawl.
+- `/api/contact.js` — contact form → Resend email. Live and wired (`<ContactForm>` on /contact). Needs `RESEND_API_KEY` (+ verified `CONTACT_FROM`) in Vercel to actually deliver; without it the form shows a graceful "email us directly" fallback. Has honeypot + validation.
+- `/api/sermons.js` — reads the channel's public YouTube RSS (no key), filters out prayer/midweek/shorts, dedupes same-titled re-uploads, returns latest Sunday messages. `<SermonsFeed>` on /sermons fetches it and falls back to the curated static `sermons.recent` list in dev. So the sermon archive auto-updates. Known gap: a rare short devotional clip can slip through (RSS has no duration).
+
+## Give hero
+Uses the evergreen-forest photo (`black-forest-…jpg`), NOT the Kingdom Builders text-graphic (which had baked-in wording that fought the headline). The KB graphic now sits in the /give "Where it goes" section.
 
 ## Deploy — ACTUAL mechanism (overrides any "Roy deploys manually" note elsewhere)
 GitHub → Vercel auto-deploy is live and connected. **Push to `main` and Vercel redeploys automatically** — this is the real, current pipeline, confirmed working across multiple commits. Do not use the local `vercel` CLI (not linked in this environment); just commit + push. Roy has asked for pushes to be autonomous — don't ask permission per-commit, just push and report what shipped.
