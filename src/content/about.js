@@ -33,7 +33,7 @@ export const about = {
 
   values: {
     label: sourced('Core values', 'faithchurchleslie.com/about-faith'),
-    heading: proposed('about-values-h', 'What we won’t compromise.', 'Heading over sourced values.'),
+    heading: approved('What we won’t compromise.'),
     list: [
       sourced('We believe God’s presence is essential to transformation in a community, and thus seeking His presence must always take precedence over our plans and programs.', 'faithchurchleslie.com/about-faith'),
       sourced('We are determined to preach Jesus Christ and Him crucified (1 Cor. 2:2) and to be a people who live a lifestyle of being crucified with Christ (Gal. 2:20).', 'faithchurchleslie.com/about-faith'),

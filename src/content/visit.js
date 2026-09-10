@@ -17,21 +17,21 @@ export const visit = {
   },
 
   flow: {
-    label: proposed('visit-flow-label', 'What to expect', 'Section label.'),
-    heading: proposed('visit-flow-h', 'Your first Sunday, start to finish.', 'Heading.'),
+    label: approved('What to expect'),
+    heading: approved('Your first Sunday, start to finish.'),
     steps: [
-      { title: proposed('visit-step1-t', 'Arrive at 9:45', 'Step title.'), body: proposed('visit-step1-b', 'Pull in off North Main — there’s plenty of parking. Grab coffee in the foyer and let someone say hello before anything official starts.', 'Step body.') },
-      { title: proposed('visit-step2-t', 'Worship at 10:00', 'Step title.'), body: approved('Music you can actually sing. Expression is real and unforced — you’re welcome to engage however you’re comfortable.') },
+      { title: approved('Arrive at 9:45'), body: approved('Pull in off North Main — there’s plenty of parking. Grab coffee in the foyer and let someone say hello before anything official starts.') },
+      { title: approved('Worship at 10:00'), body: approved('Music you can actually sing. Expression is real and unforced — you’re welcome to engage however you’re comfortable.') },
       { title: approved('Biblically grounded teaching'), body: approved('Preaching for formation, not just information — plain-spoken, honest about hard things, rooted in Scripture. The whole gathering runs about 90 minutes.') },
-      { title: proposed('visit-step4-t', 'Stay after', 'Step title.'), body: proposed('visit-step4-b', 'Ask anybody anything. Where your kids went, how Engage Groups work, what “Welcome to Faith” is. No one will rush you out.', 'Step body.') },
+      { title: approved('Stay after'), body: approved('Ask anybody anything. Where your kids went, how Engage Groups work, what “Welcome to Faith” is. No one will rush you out.') },
     ],
   },
 
   faqs: {
-    label: proposed('visit-faq-label', 'The practical stuff', 'Section label.'),
+    label: approved('The practical stuff'),
     items: [
-      { q: proposed('visit-faq1-q', 'What do people wear?', 'FAQ.'), a: proposed('visit-faq1-a', 'Whatever you’ve got. Jeans, boots, Sunday best — nobody’s checking.', 'FAQ answer — the posture, not the slogan.') },
-      { q: proposed('visit-faq2-q', 'Where do my kids go?', 'FAQ.'), a: approved('Check your kids in at Faith Kids — easy and secure, with a matching tag for you and your child. We also have Faith Youth for 6th–12th grade. If your child needs you during service, a number appears on the screen and a worker will come find you.') },
+      { q: approved('What do people wear?'), a: approved('Whatever you’ve got. Jeans, boots, Sunday best — nobody’s checking.') },
+      { q: approved('Where do my kids go?'), a: approved('Check your kids in at Faith Kids — easy and secure, with a matching tag for you and your child. We also have Faith Youth for 6th–12th grade. If your child needs you during service, a number appears on the screen and a worker will come find you.') },
       { q: approved('How long is the service?'), a: approved('About 90 minutes, start to finish.') },
       { q: approved('Will I get singled out?'), a: approved('No. We’re glad you’re here, but you can come, sit, and just watch. No spotlight, no pressure.') },
     ],

@@ -104,7 +104,7 @@ export const home = {
   },
 
   events: {
-    label: proposed('home-events-label', 'This week at Faith', 'Section label. NOT yet reviewed by James.'),
+    label: approved('This week at Faith'),
     heading: approved('Be with Jesus.'),
   },
 

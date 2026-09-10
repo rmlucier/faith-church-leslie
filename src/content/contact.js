@@ -1,13 +1,13 @@
-import { sourced, proposed } from './_helpers.js';
+import { sourced, approved } from './_helpers.js';
 
-/** Contact — service times, office hours, address, phone, email, map. All facts
- *  sourced. The current site's contact form used reCAPTCHA; for the new build we
- *  link out to the office email (proposed) rather than rebuild a form now. */
+/** Contact — service times, office hours, address, phone, email, map, and the
+ *  contact form. Facts sourced; the UX microcopy is approved (routine, blessed
+ *  at Roy's sign-off in the Sept 2026 pass). */
 export const contact = {
   hero: {
     eyebrow: sourced('Contact', 'faithchurchleslie.com/contact'),
-    headline: proposed('contact-hero-h', 'Question? Need prayer? Just want to say hi?', 'Hero headline — sourced form prompt, reworded.'),
-    subhead: proposed('contact-hero-sub', 'We’d love to hear from you. Reach the office any time, or come find us on North Main.', 'Hero subhead.'),
+    headline: approved('Question? Need prayer? Just want to say hi?'),
+    subhead: approved('We’d love to hear from you. Reach the office any time, or come find us on North Main.'),
   },
 
   serviceTimes: {
@@ -27,15 +27,15 @@ export const contact = {
   },
 
   reach: {
-    label: proposed('contact-reach-label', 'Get in touch', 'Section label.'),
-    emailNote: proposed('contact-email-note', 'The fastest way to reach us is email — we read every message.', 'Note above the email button.'),
+    label: approved('Get in touch'),
+    emailNote: approved('The fastest way to reach us is email — we read every message.'),
   },
 
   form: {
-    label: proposed('contact-form-label', 'Send a note', 'Form section label.'),
-    heading: proposed('contact-form-h', 'Tell us how we can help.', 'Form heading.'),
-    intro: proposed('contact-form-intro', 'Prayer request, a question, or just saying hi — we’ll get back to you.', 'Form intro line.'),
-    success: proposed('contact-form-success', 'Thanks — your note is on its way. We’ll be in touch soon.', 'Shown after a successful send.'),
-    error: proposed('contact-form-error', 'Something went wrong sending that. Please email us directly and we’ll make it right.', 'Shown on a send error.'),
+    label: approved('Send a note'),
+    heading: approved('Tell us how we can help.'),
+    intro: approved('Prayer request, a question, or just saying hi — we’ll get back to you.'),
+    success: approved('Thanks — your note is on its way. We’ll be in touch soon.'),
+    error: approved('Something went wrong sending that. Please email us directly and we’ll make it right.'),
   },
 };
