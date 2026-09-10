@@ -31,7 +31,7 @@ export const visit = {
     label: proposed('visit-faq-label', 'The practical stuff', 'Section label.'),
     items: [
       { q: proposed('visit-faq1-q', 'What do people wear?', 'FAQ.'), a: proposed('visit-faq1-a', 'Whatever you’ve got. Jeans, boots, Sunday best — nobody’s checking.', 'FAQ answer — the posture, not the slogan.') },
-      { q: proposed('visit-faq2-q', 'Where do my kids go?', 'FAQ.'), a: approved('Check your kids in at Faith Kids — easy and secure. We’ll print a tag for your kid and a matching one for you, and come get you if they need you during service.') },
+      { q: proposed('visit-faq2-q', 'Where do my kids go?', 'FAQ.'), a: approved('Check your kids in at Faith Kids — easy and secure, with a matching tag for you and your child. We also have Faith Youth for 6th–12th grade. If your child needs you during service, a number appears on the screen and a worker will come find you.') },
       { q: approved('How long is the service?'), a: approved('About 90 minutes, start to finish.') },
       { q: approved('Will I get singled out?'), a: approved('No. We’re glad you’re here, but you can come, sit, and just watch. No spotlight, no pressure.') },
     ],
