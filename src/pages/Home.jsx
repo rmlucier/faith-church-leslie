@@ -25,7 +25,7 @@ export default function Home() {
       seo={{
         title: 'Faith Church — Leslie, MI. Sundays at 10am.',
         description:
-          'A Jesus-centered family in Leslie, Michigan. Built for people who came to do something. Sundays at 10am, coffee at 9:45.',
+          'A Jesus-centered family in Leslie, Michigan, learning to slow down to be with Jesus. Sundays at 10am, coffee at 9:45.',
         path: '/',
       }}
     >

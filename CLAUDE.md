@@ -9,7 +9,7 @@ Vite + React + Tailwind + Framer Motion + React Router SPA. Feed & Seed brand di
 - Palette (Tailwind config): manila #EFE4C7, kraft #D9C9A1, hunter #2D4A2B, faded #9CAA8E, burlap #5A523C, ink #1A1A14
 - Display: Roboto Slab 700 (Google Fonts family "Roboto+Slab:wght@400;700")
 - Body: IBM Plex Sans Condensed 400/600 (family "IBM+Plex+Sans+Condensed:wght@400;600")
-- Tagline: "Built for people who came to do something."
+- Hero line / tagline: "Learning to slow down to be with Jesus." (Pastor James, Sept 2026 — replaced the earlier AI placeholder "Built for people who came to do something," which Roy confirmed was never the real tagline). James's whole Sept review leans into a "slow down / be with Jesus / push back on hurry" theme.
 
 ## Voice — LOCKED
 Sourced from /Users/fc-office/Documents/Claude/Projects/Faith Church/_voice-evidence.md. Signature phrases: "Come on in", "I want you to", "we're the church that prays", "around tables, not in rows". Banned: "relevant", "authentic community", "full gospel", "unlock", "elevate".

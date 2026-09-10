@@ -1,17 +1,17 @@
-import { sourced, proposed } from './_helpers.js';
+import { sourced, proposed, approved } from './_helpers.js';
 
 /** About — the longest page. History, mission/vision/strategy, core values,
  *  leadership (all verbatim from /about-faith), plus proposed differentiators. */
 export const about = {
   hero: {
     eyebrow: 'About Faith Church',
-    headline: proposed('about-hero-h', 'A history of stepping out in faith.', 'About hero headline.'),
+    headline: approved('A history of stepping out in faith.'),
     photo: '/images/from-current-site/IMG_4233_Large-1591768.jpeg',
   },
 
   history: {
     label: sourced('Our history', 'faithchurchleslie.com/about-faith'),
-    heading: proposed('about-history-h', 'Planted in 1976. Still making disciples.', 'Heading over sourced history.'),
+    heading: approved('Different year — same mission.'),
     paragraphs: [
       sourced('Our history as a church dates back to 1976 when the church was planted and founded as Faith Assembly of God. Our founders started in their homes and elected Samuel Steadman to be the first Lead Pastor. Pastor Sam would faithfully serve as the Lead Pastor for the next 44 years until the fall of 2020.', 'faithchurchleslie.com/about-faith'),
       sourced('Soon after launching, Faith Assembly rented a storefront on Main St. in downtown Leslie. Just a few short years later the church was able to purchase the former Free Methodist building on Church St in downtown Leslie. This location would be home for over 20 years before acquiring the current property on 4020 N. Main St. next to Leslie High School.', 'faithchurchleslie.com/about-faith'),
@@ -55,19 +55,19 @@ export const about = {
     paragraphs: [
       sourced('In September of 2020, Pastor James was elected as Faith Church’s second Lead Pastor. Pastor James and his family have returned full-circle to where he grew up after being away from Michigan for 17 years. He brings his unique experience serving ten years overseas as a missionary in Haiti combined with a passion to witness personal and community transformation.', 'faithchurchleslie.com/about-faith'),
       sourced('Pastor Crystal serves as the Worship Pastor at Faith as well as the social media director. Crystal brings a passion for the presence of Jesus during our times of corporate gathering. God uses her creativity, and her willingness to wait, to lead the gathering church in times of refreshing in His presence.', 'faithchurchleslie.com/about-faith'),
-      sourced('James and Crystal have 10 children, 7 grandchildren, and a French Bulldog named Moose. Together, their love for Jesus and love for people fosters a Kingdom culture at Faith Church.', 'faithchurchleslie.com/about-faith'),
+      approved('James and Crystal have 10 children, 9 grandchildren and growing, a French Bulldog named Moose, and a Bernese Mountain Dog named Mable. Together, their love for Jesus and love for people fosters a Kingdom culture at Faith Church.'),
     ],
   },
 
   differentiators: {
-    label: proposed('about-diff-label', 'What makes Faith different', 'Section label.'),
-    heading: proposed('about-diff-h', 'Not a megachurch in miniature.', 'Heading — Brand Guide anti-aesthetic.'),
+    label: approved('What makes Faith different'),
+    heading: approved('Intentional Pathway of Slowing Down.'),
     list: [
-      proposed('about-diff-1', 'The most intentional discipleship pathway in Leslie and Jackson County — five named stages, not a vague “get involved.”', 'Differentiator 1 (Brand Guide §9).'),
-      proposed('about-diff-2', 'Global DNA. A decade in Haiti shapes the leadership’s instincts.', 'Differentiator 2.'),
-      proposed('about-diff-3', 'A particular ministry to broken and blended families, and to women coming out of hard places.', 'Differentiator 3.'),
-      proposed('about-diff-4', 'The only Pentecostal church in Leslie — distinct in worship, expression, and doctrine.', 'Differentiator 4 (uses "Pentecostal" — Brand Guide says fine where doctrinally relevant).'),
-      proposed('about-diff-5', 'A family-led church. James and Crystal, ten kids, and a French Bulldog named Moose. Texture, not corporate.', 'Differentiator 5.'),
+      approved('We push back on the cultural norms of hurry and accumulation and seek to slow down to be with Jesus.'),
+      approved('Global DNA. A decade in Haiti shapes the leadership’s instincts.'),
+      approved('A particular ministry to broken and blended families, and to women coming out of hard places.'),
+      approved('A 50-year history of faithfulness.'),
+      approved('Committed to Being / Becoming / Doing.'),
     ],
   },
 };

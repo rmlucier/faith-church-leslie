@@ -9,7 +9,7 @@ export const church = {
   name: 'Faith Church',
   city: 'Leslie',
   state: 'MI',
-  tagline: 'Built for people who came to do something.', // brand tagline (Feed & Seed)
+  tagline: 'Learning to slow down to be with Jesus.', // brand line (Pastor James, Sept 2026 — replaced the AI placeholder)
   mission:
     'A Jesus-centered family experiencing whole-life transformation.', // from /about-faith
   since: 1976, // Faith Assembly of God planted 1976 (/about-faith)

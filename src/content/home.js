@@ -1,19 +1,17 @@
-import { sourced, proposed } from './_helpers.js';
+import { sourced, proposed, approved } from './_helpers.js';
 
 /**
- * Home — long-scroll page. Copy grounded in the 5 messaging pillars
- * (Brand Guide §7) and the current-site content map. Sourced strings carry a
- * `source`; everything we wrote is `proposed` for James. The brand tagline is
- * a locked brand asset (like the logo/palette) and is not footnoted.
+ * Home — long-scroll page. Copy grounded in the current-site content map and
+ * Pastor James's Sept 2026 review. `sourced` = from the old site, `approved` =
+ * James reviewed/blessed it, `proposed` = still awaiting his review.
  */
 export const home = {
   hero: {
     eyebrow: 'Leslie, Michigan · Sundays 10 AM', // sourced facts
-    tagline: 'Built for people who came to do something.', // locked brand tagline
-    subhead: proposed(
-      'home-hero-sub',
-      "Come on in. Coffee's hot at 9:45 and we saved you a seat at 10 — a Jesus-centered family doing the real work of becoming like Jesus.",
-      'Hero subhead — Feed & Seed voice ("Come on in," "we saved you a seat") over the sourced mission line.'
+    // Hero line — James's direction (replaces the old AI placeholder tagline).
+    tagline: 'Learning to slow down to be with Jesus.',
+    subhead: approved(
+      "Come on in. Coffee's hot at 9:45 and we saved you a seat at 10 — a Jesus-centered family becoming like Jesus."
     ),
     photo: '/images/from-current-site/IMG_1195_Large-1591768.jpeg',
   },
@@ -24,18 +22,14 @@ export const home = {
     'faithchurchleslie.com/contact'
   ),
 
-  // Gather · Engage · Serve — the sourced strategy, each with proposed framing.
+  // Gather · Engage · Serve
   strategy: {
     label: sourced('Gather · Engage · Serve', 'faithchurchleslie.com/about-faith'),
-    heading: proposed(
-      'home-strategy-heading',
-      'A family, not a crowd.',
-      'Section heading — Pillar 1 ("A Family, Not a Crowd").'
-    ),
+    heading: approved('A family where Jesus is everything.'),
     columns: [
       {
         eyebrow: sourced('Gather'),
-        heading: proposed('home-gather-h', 'You’ll be known before you’re impressed.', 'Gather column heading — Pillar 1 language.'),
+        heading: approved('The power of the gathering body of Christ.'),
         body: sourced(
           'As we Gather, worship, pray and share the Gospel of Jesus Christ, we seek the glory of God.',
           'faithchurchleslie.com/about-faith'
@@ -44,7 +38,7 @@ export const home = {
       },
       {
         eyebrow: sourced('Engage'),
-        heading: proposed('home-engage-h', 'Around tables, not in rows.', 'Engage column heading — sourced Engage Groups language, brand-approved phrase.'),
+        heading: approved('Around tables, not in rows.'),
         body: sourced(
           'The most effective discipleship takes place around tables, in small groups we call Engage Groups — relational, pastoral, and missional.',
           'faithchurchleslie.com/engagegroups'
@@ -53,7 +47,7 @@ export const home = {
       },
       {
         eyebrow: sourced('Serve'),
-        heading: proposed('home-serve-h', 'We go where it hurts.', 'Serve column heading — Pillar 4 ("Sent Into the Mess").'),
+        heading: approved('Serving one another and our world is our culture.'),
         body: sourced(
           'For His glory, we Serve and care for one another, our community, our nation, and our world.',
           'faithchurchleslie.com/about-faith'
@@ -63,68 +57,60 @@ export const home = {
     ],
   },
 
-  // What to expect on Sunday — 3 numbered items (all proposed voice)
+  // What to expect on Sunday — 3 numbered items
   visit: {
-    label: proposed('home-visit-label', 'What to expect on Sunday', 'Section label.'),
-    heading: proposed('home-visit-h', 'No hoops. Just walk in.', 'Section heading.'),
+    label: approved('What to expect on Sunday'),
+    heading: approved('No hoops. Just come as you are.'),
     items: [
-      proposed(
-        'home-visit-1',
-        'Come at 9:45. Coffee, refreshments, and a real welcome in the foyer before anything starts.',
-        'Step 1 — sourced coffee-at-9:45 fact in Feed & Seed voice.'
+      approved(
+        "Come at 9:45. Coffee's on in the Rooted Pine Café, and you can check your kids in at Faith Kids."
       ),
-      proposed(
-        'home-visit-2',
-        'Worship and teaching run about 90 minutes. Music you can actually sing, a message that treats you like a grown-up.',
-        'Step 2 — service length + tone.'
+      approved(
+        'Slowed-down worship, communion, and teaching that runs about 90 minutes. We slow down to listen and be with Jesus.'
       ),
-      proposed(
-        'home-visit-3',
-        'Stay after. Ask anybody anything — where the kids go, how Engage Groups work, what to do next.',
-        'Step 3 — staying after.'
-      ),
+      approved('Stay after. Meet our Welcome Team. Check out Next Steps.'),
     ],
   },
 
-  // The pathway — 5 stops (names sourced; one-liners proposed where the current
-  // site had no copy)
+  // The pathway — 5 stops
   pathway: {
     label: sourced('The discipleship pathway', 'faithchurchleslie.com/engagegroups'),
-    heading: proposed('home-path-h', 'A pathway, not a program.', 'Heading — Pillar 2.'),
+    heading: approved('A pathway, not a program.'),
     tagline: sourced('Be / Become / Do', 'faithchurchleslie.com/engagegroups'),
     stops: [
-      { name: sourced('Welcome to Faith'), body: proposed('home-path-1', 'Four Sundays, coffee, no homework. Meet the church and find your footing.', 'Stop 1 — NO copy existed on current site.') },
+      { name: sourced('Welcome to Faith'), body: approved('Offered a few times a year: meet the pastors, our culture, and begin your journey.') },
       { name: sourced('The Rooted Experience'), body: sourced('Ten weeks connecting with God, the church, and your purpose through the key rhythms of faith.', 'faithchurchleslie.com/engagegroups') },
-      { name: sourced('Discover Partnership'), body: proposed('home-path-3', 'Where belonging becomes commitment — what it means to call Faith Church home.', 'Stop 3 — NO copy existed on current site.') },
+      { name: sourced('Discover Partnership'), body: approved('What it means to be in covenant @ Faith Church.') },
       { name: sourced('Emotionally Healthy Discipleship'), body: sourced('Eight weeks integrating emotional health and spiritual depth — beyond surface-level practice.', 'faithchurchleslie.com/engagegroups') },
       { name: sourced('Engage Groups'), body: sourced('Micro-churches within the family — six to ten people, in a home, doing the slow work of becoming like Jesus.', 'faithchurchleslie.com/engagegroups') },
     ],
     cta: { label: 'Find your Engage Group', href: 'engageGroupsReg' },
   },
 
-  // Sent into the mess — Pillar 4 (Brand Guide §7). All proposed.
+  // Sent into the mess — James edited the section label (#14); the heading,
+  // body, and verse (old #15–17) he did not address, so they stay proposed.
   serve: {
-    label: proposed('home-mess-label', 'Sent into the mess', 'Section label — Pillar 4.'),
-    heading: proposed('home-mess-h', 'Swing sets for single moms. Furnaces for neighbors. Haiti.', 'Heading — verbatim from Brand Guide Pillar 4.'),
+    label: approved('Called into the places of our world and our local communities.'),
+    heading: proposed('home-mess-h', 'Swing sets for single moms. Furnaces for neighbors. Haiti.', 'Heading — verbatim from Brand Guide Pillar 4. NOT yet reviewed by James.'),
     body: proposed(
       'home-mess-body',
       'Football team dinners. A decade in Haiti in the leadership’s bones. A church that doesn’t tidy up suffering before it shows up in it. We go where it hurts.',
-      'Body — Brand Guide voice; carries the Haiti differentiator.'
+      'Body — Brand Guide voice; carries the Haiti differentiator. NOT yet reviewed by James.'
     ),
     scripture: {
-      quote: proposed('home-mess-verse', 'He gives seed to the sower.', 'Scripture card — Feed & Seed offering line (2 Cor. 9:10 paraphrase).'),
+      quote: proposed('home-mess-verse', 'He gives seed to the sower.', 'Scripture card (2 Cor. 9:10 paraphrase). NOT yet reviewed by James.'),
       ref: sourced('2 Corinthians 9:10'),
     },
   },
 
   events: {
-    label: proposed('home-events-label', 'This week at Faith', 'Section label.'),
-    heading: proposed('home-events-h', 'Something’s always going on.', 'Heading.'),
+    label: proposed('home-events-label', 'This week at Faith', 'Section label. NOT yet reviewed by James.'),
+    heading: approved('Be with Jesus.'),
   },
 
   give: {
     label: sourced('Kingdom Builders', 'faithchurchleslie.com'),
-    heading: proposed('home-give-h', 'Some seed to keep. Some to sow.', 'Heading — Feed & Seed offering line.'),
+    heading: approved('Some seed to keep. Some to sow.'),
     body: sourced(
       'Kingdom Builders giving supports ministries like Jackson Interfaith Shelter, Youth Haven Ranch and the Leslie Outreach, plus our national and global workers and missionaries.',
       'faithchurchleslie.com'
@@ -134,13 +120,13 @@ export const home = {
 
   sermons: {
     label: sourced('Message Archive', 'faithchurchleslie.com/sermons'),
-    heading: proposed('home-sermons-h', 'Miss a Sunday? Catch up here.', 'Heading.'),
+    heading: approved('Miss a Sunday? Catch up here.'),
     recentVideoId: 'FN4AtPLlvDM', // "Roots — Week 2" (most recent, from crawl)
     recentTitle: sourced('Roots — Week 2', 'faithchurchleslie.com/sermons'),
   },
 
   contact: {
-    label: proposed('home-contact-label', 'Come find us', 'Section label.'),
-    heading: proposed('home-contact-h', 'Next to Leslie High, on North Main.', 'Heading — sourced location detail.'),
+    label: approved('Come find us'),
+    heading: approved('Next to Leslie High, on North Main.'),
   },
 };

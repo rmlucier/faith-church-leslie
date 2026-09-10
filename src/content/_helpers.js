@@ -19,3 +19,14 @@ export const proposed = (id, text, note) => ({
   id,
   note: note || text,
 });
+
+/**
+ * approved(text, by?) — copy Pastor James has reviewed and blessed (his own
+ * words, or ours that he signed off on). Renders plainly like `sourced` (no
+ * footnote — it drops out of Review Notes), but its provenance is his review,
+ * not the current site. Introduced with his Sept 2026 copy pass.
+ */
+export const approved = (text, by = 'Pastor James — Sept 2026 review') => ({
+  text,
+  source: by,
+});

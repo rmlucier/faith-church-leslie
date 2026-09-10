@@ -1,12 +1,12 @@
-import { sourced, proposed } from './_helpers.js';
+import { sourced, approved } from './_helpers.js';
 
 /** Events — full feed page. The live list comes from <EventsFeed limit={null} />;
  *  the recurring rhythm below is sourced from the current /events page. */
 export const events = {
   hero: {
     eyebrow: sourced('Upcoming events', 'faithchurchleslie.com/events'),
-    headline: proposed('events-hero-h', 'Something’s always going on.', 'Hero headline.'),
-    subhead: proposed('events-hero-sub', 'Gatherings, prayer, classes, and outreach. Here’s what’s next at Faith Church.', 'Hero subhead.'),
+    headline: approved('Something’s always going on.'),
+    subhead: approved('Gatherings, prayer, classes, and outreach. Here’s what’s next at Faith Church.'),
     photo: '/images/from-current-site/image-asset-6929259.jpeg',
   },
 

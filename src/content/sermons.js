@@ -1,12 +1,12 @@
-import { sourced, proposed } from './_helpers.js';
+import { sourced, proposed, approved } from './_helpers.js';
 
 /** Sermons — archive. Recent Sunday messages captured from the current site's
  *  YouTube archive (sourced titles/dates/IDs). Full archive links to YouTube. */
 export const sermons = {
   hero: {
     eyebrow: sourced('Message Archive', 'faithchurchleslie.com/sermons'),
-    headline: proposed('sermons-hero-h', 'Miss a Sunday? Catch up here.', 'Hero headline.'),
-    subhead: proposed('sermons-hero-sub', 'Teaching that treats you like a grown-up — plain-spoken, honest, rooted in Scripture. Watch past gatherings any time.', 'Hero subhead — Brand Guide voice.'),
+    headline: approved('Miss a Sunday? Catch up here.'),
+    subhead: approved('Biblically grounded teaching, aimed at formation, not just information. Watch past gatherings any time.'),
     photo: '/images/from-current-site/IMG_4233_Large-1591768.jpeg',
   },
 
@@ -19,5 +19,5 @@ export const sermons = {
     { videoId: '9sMkvuNCMtc', title: sourced('Real Freedom — Galatians 5', 'faithchurchleslie.com/sermons'), date: sourced('July 5, 2026', 'faithchurchleslie.com/sermons'), speaker: sourced('Pastor James Courter', 'faithchurchleslie.com/sermons') },
   ],
 
-  archiveNote: proposed('sermons-archive-note', 'The full archive — every Sunday gathering and midweek prayer — lives on our YouTube channel.', 'Note linking to YouTube.'),
+  archiveNote: approved('The full archive — every Sunday gathering and midweek prayer — lives on our YouTube channel.'),
 };
