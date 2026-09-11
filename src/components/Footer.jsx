@@ -36,12 +36,12 @@ export default function Footer() {
             <address className="mt-5 not-italic font-body text-manila/90 leading-relaxed space-y-1">
               <p className="text-manila/90">{church.address.line}</p>
               <p>
-                <a href={`tel:${church.phoneHref}`} className="hover:text-white">
+                <a href={`tel:${church.phoneHref}`} className="text-manila/90 hover:text-white">
                   {church.phone}
                 </a>
               </p>
               <p>
-                <a href={`mailto:${church.email}`} className="hover:text-white">
+                <a href={`mailto:${church.email}`} className="text-manila/90 hover:text-white">
                   {church.email}
                 </a>
               </p>
