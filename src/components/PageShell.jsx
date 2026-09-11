@@ -1,22 +1,22 @@
 import { ProposedProvider } from '../hooks/useProposed.js';
 import SEO from './SEO.jsx';
-import ReviewNotes from './ReviewNotes.jsx';
 
 /**
- * Per-page chrome. Wraps a page in the ProposedProvider (so <ProposedString>
- * and <ReviewNotes> share one registry), renders SEO tags up top, the page
- * body, then the ReviewNotes block last (above the global footer).
+ * Per-page chrome. Renders SEO tags up top, then the page body.
+ *
+ * The ReviewNotes "first draft copy" bar was removed (Sept 2026) — proposed
+ * copy now stands as the live copy. ProposedProvider is kept as a harmless
+ * no-op wrapper so the registry hook still resolves if anything references it.
  *
  *   <PageShell seo={{ title, description, path }} label="Home">
  *     …sections…
  *   </PageShell>
  */
-export default function PageShell({ seo, label, children }) {
+export default function PageShell({ seo, children }) {
   return (
     <ProposedProvider>
       <SEO {...seo} />
       <main id="main">{children}</main>
-      <ReviewNotes page={label} />
     </ProposedProvider>
   );
 }
